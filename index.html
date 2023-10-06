@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--- Icon FontAwesome -->
+    <script src="https://kit.fontawesome.com/4cb17968f0.js" crossorigin="anonymous"></script>
+    <title>Form Validation | JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card p-4 my-3">
+            <div class="card-header">
+                <h2 class="title">Form Validation with JS</h2>
+            </div>
+            <div class="card-body">
+                <form id="form"> <!-- onsubmit="return validateForm()" method="POST" -->
+                    <!-- username -->
+                    <div class="row mb-3">
+                        <label for="username" class="form-label col-sm-3">Username</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="text" name="username" id="username" placeholder="Username" autocomplete="off">
+                            <small>error message</small>
+                        </div>
+                    </div>
+                    <!-- email -->
+                    <div class="row mb-3">
+                        <label class="form-label col-sm-3" for="email">E-mail</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="email" class="form-control" id="email" placeholder="E-mail" autocomplete="off">
+                            <small>error message</small>
+                        </div>
+                    </div>
+                    <!-- password -->
+                    <div class="row mb-3">
+                        <label class="form-label col-sm-3" for="password">Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Your Password">
+                            <small>error message</small>
+                        </div>
+                    </div>
+                    <!-- confirm password -->
+                    <div class="row mb-3">
+                        <label class="form-label col-sm-3" for="password2">Confirmer Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" name="c-password" class="form-control" id="password2" placeholder="Confirmer Password">
+                            <small>error message</small>
+                        </div>
+                    </div>
+                    <!-- Gender -->
+                    <div class="row mb-3">
+                        <legend for="gender" class="col-form-label col-sm-3">Gender</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="male" value="male" checked required>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="gridRadios" id="female" value="female" class="form-check-input" required>
+                                <label for="female" class="form-ckeck-label">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Select -->
+                    <div class="row mb-3">
+                        <label class="form-label col-sm-3" for="selectForm">Type Account</label>
+                        <div class="col-sm-9">
+                            <select class="form-select" id="selectForm">
+                                <option value="" selected>Open this select menu</option>
+                                <option value="free">Free</option>
+                                <option value="premium">Premium</option>
+                                <option value="student">Student</option>
+                            </select>
+                            <small>error message</small>
+                        </div>
+                    </div>
+                    <!-- Checkbox -->
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkForm">
+                                <label class="form-check-label" for="checkForm">Create Account.</label>
+                                <small>error message</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button Form -->
+                    <button type="submit" id="btnSubmit" class="btn btn-primary col-12">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
